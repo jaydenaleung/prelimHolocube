@@ -1,0 +1,66 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+ipch/
+*.VC.db
+*.VC.opendb
+
+# CMake intermediate files (if used)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# GLAD generated files (only keep sources you add to project)
+glad/build/
+glad/CMakeFiles/
+glad/CMakeCache.txt
+glad/*.vcxproj*
+glad/*.sln
+
+# Compiled object / library files
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.pdb
+*.idb
+*.ilk
+*.exe
+*.app
+*.out
+
+# Other VS generated
+*.tlog
+*.log
+*.lastbuildstate
+*.db
+*.opendb
+
+# Editor/OS junk
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# KiCad files
+*.lck
+*.bak
+*.kicad_prl
+**/fp-info-cache
+prelimHolocube-backups/
+**/#auto_saved_files#
