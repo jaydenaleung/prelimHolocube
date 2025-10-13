@@ -10,7 +10,7 @@ This is my journal of the design and building process of **Holocube**.
 You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/118).
 
 
-## 10/4/2025 - Design PCB Schematic & Initial CAD  
+## 10/3/2025 - Design PCB Schematic & Initial CAD  
 
 I designed the PCB schematic today and made a simple first CAD housing for it (see pictures below). I used the datasheet provided by the transparent OLED seller with a 30-pin ESP32 Devkit V1 board to design both the mechanical model and the PCB schematic. I learned that, even for a board so common as the ESP32, there was no 30-pin schematic/footprint available, so I had to make my own using a caliper measuring tool. I also made the transparent OLED display and power supply schematic, but I had to wait until some parts arrived to get some accurate measurements for the transparent OLED and power supply.
 
@@ -18,5 +18,21 @@ I designed the PCB schematic today and made a simple first CAD housing for it (s
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjY3LCJwdXIiOiJibG9iX2lkIn19--4200833a22bb0221c1a79932a827fb835342e596/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjY4LCJwdXIiOiJibG9iX2lkIn19--f028e8e72489b88057dcc0db703dc4c352af8cf0/image.png)
 
+  
+
+## 10/13/2025 - Made Footprints  
+
+After designing the PCB schematic, I proceeded to design the actual PCB footprint using a caliper and the actual transparent OLED display, which had just arrived. Before I did that, however, I tried to test the actual display to see if it would work, but I didn't have the right materials to do so. I first took measurements and added them to a Google Drawing so I would have all my measurements in one place to create my footprint more easily. See below:
+
+![Screenshot 2025-10-13 at 1.38.13 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjAzOSwicHVyIjoiYmxvYl9pZCJ9fQ==--1e0c65d4798ca9b5020e62b6fb0e6dbaa39fbcf4/Screenshot%202025-10-13%20at%201.38.13%E2%80%AFPM.png)
+
+
+After that, I designed the footprints for the transparent OLED display PCB adapter, the ESP32 (30-pin) that I had (apparently, there weren't any footprints for it online, which surprised me since it seemed to be a common board), and a simple through-hole mount for a 12V power source.
+
+![Screenshot 2025-10-13 at 1.42.53 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--7a640ee9b72db681a43019067cbc4d6670560446/Screenshot%202025-10-13%20at%201.42.53%E2%80%AFPM.png)
+
+![Screenshot 2025-10-13 at 1.43.29 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA0MSwicHVyIjoiYmxvYl9pZCJ9fQ==--1aab4925d6d306ecd1f629873f8eea313b472a79/Screenshot%202025-10-13%20at%201.43.29%E2%80%AFPM.png)
+
+![Screenshot 2025-10-13 at 1.43.21 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA0MiwicHVyIjoiYmxvYl9pZCJ9fQ==--192d2c73a988415adec0247d0dc6236d9ddfe421/Screenshot%202025-10-13%20at%201.43.21%E2%80%AFPM.png)
   
 
