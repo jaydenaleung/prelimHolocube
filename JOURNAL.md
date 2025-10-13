@@ -20,7 +20,7 @@ I designed the PCB schematic today and made a simple first CAD housing for it (s
 
   
 
-## 10/13/2025 - Made Footprints  
+## 10/13/2025 1 PM - Made Footprints  
 
 After designing the PCB schematic, I proceeded to design the actual PCB footprint using a caliper and the actual transparent OLED display, which had just arrived. Before I did that, however, I tried to test the actual display to see if it would work, but I didn't have the right materials to do so. I first took measurements and added them to a Google Drawing so I would have all my measurements in one place to create my footprint more easily. See below:
 
@@ -34,5 +34,22 @@ After that, I designed the footprints for the transparent OLED display PCB adapt
 ![Screenshot 2025-10-13 at 1.43.29 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA0MSwicHVyIjoiYmxvYl9pZCJ9fQ==--1aab4925d6d306ecd1f629873f8eea313b472a79/Screenshot%202025-10-13%20at%201.43.29%E2%80%AFPM.png)
 
 ![Screenshot 2025-10-13 at 1.43.21 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA0MiwicHVyIjoiYmxvYl9pZCJ9fQ==--192d2c73a988415adec0247d0dc6236d9ddfe421/Screenshot%202025-10-13%20at%201.43.21%E2%80%AFPM.png)
+  
+
+## 10/13/2025 2 PM - Finished PCB Layout and Routing  
+
+Over the long weekend, I decided to finally finish the PCB. I made both the PCB layout (i.e., arranging the parts) and the PCB routing (I was using KiCad, so I manually routed it).
+
+![Screenshot 2025-10-13 at 2.00.49 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA1MywicHVyIjoiYmxvYl9pZCJ9fQ==--0f2c969d4a6561face1e4d2cb6bfe24036ed819e/Screenshot%202025-10-13%20at%202.00.49%E2%80%AFPM.png)
+
+
+For the layout, I had to try a few different configurations to find out what would work for my situation. Unfortunately, the cable tying the transparent OLED display to the PCB was not very long, so I had to arrange the PCB adapters in such a way that they would allow all of the displays to fit together.
+
+![Screenshot 2025-10-13 at 2.01.18 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--8ee03d9e60977072dc7f4dafaeb904b59ccb855c/Screenshot%202025-10-13%20at%202.01.18%E2%80%AFPM.png)
+
+
+I then decided to route the PCB manually so I could get some practice with manual PCB design, and partly because I was too lazy to download a KiCad autorouter (I also didn't trust it). I noticed that the ratsnests for the grounds all pointed to the closest ground, which I perceived could be an issue for capacitors. However, KiCad still pointed the ground pads to the closest ground after fixing the schematic to be directly connected to a specific ground, so I continued and hoped it was ok.
+
+![Screenshot 2025-10-13 at 2.03.10 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA2NSwicHVyIjoiYmxvYl9pZCJ9fQ==--8d055e9181fa36801b03276384a42b099f65edcc/Screenshot%202025-10-13%20at%202.03.10%E2%80%AFPM.png)
   
 
