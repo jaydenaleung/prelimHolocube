@@ -6,10 +6,6 @@
   ==================================================================
 -->
 
-This is my journal of the design and building process of **Holocube**.  
-You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/118).
-
-
 ## 10/3/2025 - Design PCB Schematic & Initial CAD  
 
 I designed the PCB schematic today and made a simple first CAD housing for it (see pictures below). I used the datasheet provided by the transparent OLED seller with a 30-pin ESP32 Devkit V1 board to design both the mechanical model and the PCB schematic. I learned that, even for a board so common as the ESP32, there was no 30-pin schematic/footprint available, so I had to make my own using a caliper measuring tool. I also made the transparent OLED display and power supply schematic, but I had to wait until some parts arrived to get some accurate measurements for the transparent OLED and power supply.
@@ -51,5 +47,16 @@ For the layout, I had to try a few different configurations to find out what wou
 I then decided to route the PCB manually so I could get some practice with manual PCB design, and partly because I was too lazy to download a KiCad autorouter (I also didn't trust it). I noticed that the ratsnests for the grounds all pointed to the closest ground, which I perceived could be an issue for capacitors. However, KiCad still pointed the ground pads to the closest ground after fixing the schematic to be directly connected to a specific ground, so I continued and hoped it was ok.
 
 ![Screenshot 2025-10-13 at 2.03.10 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjA2NSwicHVyIjoiYmxvYl9pZCJ9fQ==--8d055e9181fa36801b03276384a42b099f65edcc/Screenshot%202025-10-13%20at%202.03.10%E2%80%AFPM.png)
+  
+
+## 10/27/2025 - Tested the Module  
+
+I tested the transparent OLED module which had arrived at my house a while ago. Using my school's robotics lab and a 12V lead acid battery I had, I used my schematic and the datasheet to hook up the module. I also soldered some header pins onto the PCB adapter that came with it so I could connect to it. The first time that I tried to hook it up, it didn't work, and the module wasn't even warm. I knew the job that I'd done was pretty rough, so I took it apart and did a cleaner job using a breadboard. Though I was wary about passing 12V through a breadboard, I was able to bypass directly passing that much voltage through using a split dupont cable - one side to my battery, one side to the breadboard, one side to the module. I haven't had the chance to test this yet since I didn't have the right ceramic capacitor, and the alligator clips haven't arrived at my house yet, but when they do, there will be another update on this journal.
+
+![IMG_5149](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTk2NSwicHVyIjoiYmxvYl9pZCJ9fQ==--3892577f6db2fbe6e3d335e2998f89ddbaefb230/IMG_5149.JPG)
+
+![IMG_5150](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTk2NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d809749b3bfb6fe0f798131b16994e7ffc57c926/IMG_5150.JPG)
+
+
   
 
