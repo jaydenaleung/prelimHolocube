@@ -7035,8 +7035,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 26.416 118.11 0)
+		(property "Value" "1uF ceramic"
+			(at 17.272 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7104,8 +7104,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 26.416 162.56 0)
+		(property "Value" "1uF ceramic"
+			(at 17.526 162.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8287,8 +8287,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 26.416 26.67 0)
+		(property "Value" "1uF ceramic"
+			(at 17.78 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8889,8 +8889,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 26.416 72.39 0)
+		(property "Value" "1uF ceramic"
+			(at 17.272 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9158,8 +9158,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 100.076 72.39 0)
+		(property "Value" "1uF ceramic"
+			(at 91.948 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9427,8 +9427,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 100.076 118.11 0)
+		(property "Value" "1uF ceramic"
+			(at 91.948 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10672,8 +10672,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 100.076 26.67 0)
+		(property "Value" "1uF ceramic"
+			(at 91.186 26.416 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11678,8 +11678,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 100.076 162.56 0)
+		(property "Value" "1uF ceramic"
+			(at 90.932 162.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
