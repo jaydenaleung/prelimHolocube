@@ -5,27 +5,28 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 128
 
-// // Arduino
-// #define OLED_MOSI 11
-// #define OLED_CLK  13
-// #define OLED_DC   5
-// #define OLED_CS   10
-// #define OLED_RST  4
+// Arduino
+#define OLED_MOSI 11
+#define OLED_CLK  13
+#define OLED_DC   5
+#define OLED_CS   10
+#define OLED_RST  4
 
 // ESP32
-#define OLED_MOSI 23
-#define OLED_CLK  18
-#define OLED_DC   21
-#define OLED_CS   5
-#define OLED_RST  22
+// #define OLED_MOSI 23
+// #define OLED_CLK  18
+// #define OLED_DC   16
+// #define OLED_CS   5
+// #define OLED_RST  4
 
 Adafruit_SH1107 display(SCREEN_WIDTH, SCREEN_HEIGHT, &SPI, OLED_DC, OLED_RST, OLED_CS, 2000000UL);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
-  SPI.begin(OLED_CLK, -1, OLED_MOSI, OLED_CS);
-  SPI.setFrequency(100000);  // 100 kHz
+  // SPI.begin(OLED_CLK, -1, OLED_MOSI, OLED_CS);
+  SPI.begin();
+  // SPI.setFrequency(100000);  // 100 kHz
   SPI.setDataMode(SPI_MODE0);
   SPI.setBitOrder(MSBFIRST);
   
