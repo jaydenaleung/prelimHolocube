@@ -18,7 +18,7 @@
 // #define OLED_DC   16
 // #define OLED_CS   5
 // #define OLED_RST  4
-
+l
 Adafruit_SH1107 display(SCREEN_WIDTH, SCREEN_HEIGHT, &SPI, OLED_DC, OLED_RST, OLED_CS, 2000000UL);
 
 void setup() {
