@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "transparent_oled_display")(type "KiCad")(uri "${KIPRJMOD}/libraries/transparent_oled_display.pretty")(options "")(descr ""))
+)

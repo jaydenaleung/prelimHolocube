@@ -62,5 +62,5 @@ desktop.ini
 *.bak
 *.kicad_prl
 **/fp-info-cache
-prelimHolocube-backups/
+*backups*/
 **/#auto_saved_files#
