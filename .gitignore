@@ -1,36 +1,58 @@
-# Visual Studio files
+########################################
+#   IDEs & Editors
+########################################
+
+# Visual Studio / Rider / VSCode
 .vs/
+.idea/
+.vscode/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+*.pidb
+*.userprefs
+*.unityproj
+*.booproj
+*.DotSettings.user
+*.sln.iml
 
-# Build results
+########################################
+#   Build Systems & CMake
+########################################
+
+# Visual Studio build results
 [Dd]ebug/
 [Rr]elease/
 x64/
 x86/
-[Bb]uild/
 [Bb]in/
 [Oo]bj/
+[Bb]uild/
 ipch/
 *.VC.db
 *.VC.opendb
 
-# CMake intermediate files (if used)
+# CMake intermediate files
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
 
-# GLAD generated files (only keep sources you add to project)
+########################################
+#   GLAD (OpenGL Loader)
+########################################
+
 glad/build/
 glad/CMakeFiles/
 glad/CMakeCache.txt
 glad/*.vcxproj*
 glad/*.sln
 
-# Compiled object / library files
+########################################
+#   Compiled / Binary Files
+########################################
+
 *.obj
 *.o
 *.a
@@ -44,23 +66,80 @@ glad/*.sln
 *.exe
 *.app
 *.out
+*.mdb
+*.dSYM/
+*.apk
+*.aab
+*.ipa
+*.unitypackage
 
-# Other VS generated
+########################################
+#   Logs / Misc / Cache
+########################################
+
 *.tlog
 *.log
 *.lastbuildstate
 *.db
 *.opendb
+*.swp
+*.tmp
+*.bak
+*.old
+*.orig
 
-# Editor/OS junk
+########################################
+#   OS Files
+########################################
+
+.DS_Store
 *.DS_Store
 Thumbs.db
+Desktop.ini
 desktop.ini
 
-# KiCad files
+########################################
+#   KiCad
+########################################
+
 *.lck
-*.bak
 *.kicad_prl
 **/fp-info-cache
 *backups*/
 **/#auto_saved_files#
+
+########################################
+#   Unity Generated Files
+########################################
+
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]serSettings/
+**/[Mm]emoryCaptures/
+**/[Pp]ackages/com.unity.collab-proxy/
+**/[Cc]acheServer/
+
+# Unity cache & Addressables
+**/[Aa]ssets/AddressableAssetsData/*
+!**/[Aa]ssets/AddressableAssetsData/*.meta
+**/[Aa]ssets/StreamingAssets/aa/*
+!**/[Aa]ssets/StreamingAssets/aa/*.meta
+
+# JetBrains Rider plugin
+**/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Keep essential Unity project data
+!**/[Aa]ssets/**/*.meta
+!**/[Pp]rojectSettings/
+!**/[Pp]ackages/
+
+########################################
+#   Crash Reports & Misc
+########################################
+
+sysinfo.txt
+.collabignore
