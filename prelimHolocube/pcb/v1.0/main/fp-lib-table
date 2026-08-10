@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "esp32")(type "KiCad")(uri "C:/Users/Jayde/Desktop/github repos/prelimHolocube--seperate_for_blueprint--DONOTEDIT/prelimHolocube/pcb/libraries/esp32.pretty")(options "")(descr ""))
+  (lib (name "transparent_oled_display")(type "KiCad")(uri "C:/Users/Jayde/Desktop/github repos/prelimHolocube--seperate_for_blueprint--DONOTEDIT/prelimHolocube/pcb/libraries/transparent_oled_display.pretty")(options "")(descr ""))
+  (lib (name "KY-040")(type "KiCad")(uri "C:/Users/Jayde/Desktop/github repos/prelimHolocube--seperate_for_blueprint--DONOTEDIT/prelimHolocube/pcb/libraries/KY-040.pretty")(options "")(descr ""))
+  (lib (name "boost_converter")(type "KiCad")(uri "C:/Users/Jayde/Desktop/github repos/prelimHolocube--seperate_for_blueprint--DONOTEDIT/prelimHolocube/pcb/libraries/boost_converter.pretty")(options "")(descr ""))
+)
