@@ -419,4 +419,15 @@
 		(uuid "7186ade4-12b5-46c2-85a0-75f63ee8c99d")
 	)
 	(embedded_fonts no)
+	(model "C:/Users/Jayde/Desktop/github repos/prelimHolocube--seperate_for_blueprint--DONOTEDIT/prelimHolocube/pcb/libraries/esp32-30pin-USBC.step"
+		(offset
+			(xyz 10.6 -45.6 20.37)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )

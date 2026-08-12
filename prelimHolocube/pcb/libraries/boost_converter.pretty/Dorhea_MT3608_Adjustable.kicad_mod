@@ -110,7 +110,7 @@
 		(uuid "919be14c-301d-41a8-96e9-47ad7d5ab4c8")
 	)
 	(pad "2" thru_hole roundrect
-		(at -11.7 6.2)
+		(at -10.3 5.2)
 		(size 4 2)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -120,7 +120,7 @@
 		(uuid "6295f896-bcee-458f-86fb-546fb455be2f")
 	)
 	(pad "3" thru_hole roundrect
-		(at 12 -6.6)
+		(at 10.1 -4.7)
 		(size 4 2)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
