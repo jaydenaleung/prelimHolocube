@@ -4143,6 +4143,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 63.5) (xy 252.73 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5cb1c45-8f03-47ac-92e2-074dfa134485")
+	)
+	(wire
+		(pts
 			(xy 158.75 193.04) (xy 115.57 193.04)
 		)
 		(stroke
@@ -5417,7 +5427,7 @@
 	)
 	(global_label "RES"
 		(shape input)
-		(at 252.73 73.66 0)
+		(at 252.73 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5427,7 +5437,7 @@
 		)
 		(uuid "c742e13d-9185-4279-8124-d3f5018f49d9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 259.3437 73.66 0)
+			(at 259.3437 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6107,7 +6117,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 102.87 43.18 90)
 			(effects
 				(font
@@ -6439,7 +6449,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 102.87 179.07 90)
 			(effects
 				(font
@@ -7728,6 +7738,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 245.11 40.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3715b16a-00c1-4510-aac5-506006f451f2")
+		(property "Reference" "#PWR045"
+			(at 251.46 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 250.444 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.11 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.11 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 245.11 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "693f08c7-fa0b-4fd6-8149-ddcbaef61d2e")
+		)
+		(instances
+			(project "test_multi-board"
+				(path "/364c5bf3-0078-465d-b9ac-45c99f916d6d"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_US")
 		(at 106.68 185.42 0)
 		(unit 1)
@@ -8824,7 +8899,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 29.21 134.62 90)
 			(effects
 				(font
@@ -9228,7 +9303,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 102.87 134.62 90)
 			(effects
 				(font
@@ -9270,73 +9345,6 @@
 			(project "prelimHolocube"
 				(path "/364c5bf3-0078-465d-b9ac-45c99f916d6d"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 248.92 73.66 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "83ea69b1-ac39-4135-8718-91811c1e7725")
-		(property "Reference" "R3"
-			(at 246.38 76.454 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 251.46 76.454 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 249.174 72.644 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 248.92 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 248.92 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0f8e9019-d5ea-49ab-a85b-a6202ef45974")
-		)
-		(pin "2"
-			(uuid "e924a8b9-c1d7-4c7c-973f-670282634855")
-		)
-		(instances
-			(project ""
-				(path "/364c5bf3-0078-465d-b9ac-45c99f916d6d"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -9595,7 +9603,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 29.21 179.07 90)
 			(effects
 				(font
@@ -10255,7 +10263,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 29.21 43.18 90)
 			(effects
 				(font
@@ -10607,7 +10615,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 102.87 88.9 90)
 			(effects
 				(font
@@ -10742,7 +10750,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 226.06 132.0799 90)
 			(effects
 				(font
@@ -10976,7 +10984,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+13.5V"
 			(at 29.21 88.9 90)
 			(effects
 				(font

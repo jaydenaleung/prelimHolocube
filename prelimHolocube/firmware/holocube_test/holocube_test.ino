@@ -89,7 +89,7 @@ void setup() {
 
 
   Serial.println("Pre-delay boot");
-  delay(1000);
+  delay(5000);
   Serial.println("Post-delay boot");
  
   smoke_test();
@@ -113,16 +113,16 @@ void loop() {
 void smoke_test() {
   pinMode(PIN_CS, OUTPUT); pinMode(PIN_DC, OUTPUT); pinMode(PIN_RST, OUTPUT);
   SPI.begin(18, -1, 23, PIN_CS);
-  digitalWrite(PIN_RST, LOW);  delayMicroseconds(100);   // reset pulse
-  digitalWrite(PIN_RST, HIGH); delay(10);
+  digitalWrite(PIN_RST, LOW);  delay(100);   // reset pulse
+  digitalWrite(PIN_RST, HIGH); delay(100);
   SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
-  digitalWrite(PIN_DC, LOW);   // command
+  digitalWrite(PIN_DC, LOW);   // command mode
   digitalWrite(PIN_CS, LOW);
   SPI.transfer(0xAD); SPI.transfer(0x8A);  // DC-DC off (external VPP)
+  SPI.transfer(0x81); SPI.transfer(0xFF);  // Set Contrast Control command to max
   SPI.transfer(0xA5);                      // entire display ON (all pixels)
   SPI.transfer(0xAF);                      // display on
   digitalWrite(PIN_CS, HIGH);
   SPI.endTransaction();
   // 0xA5 forces ALL pixels on regardless of RAM -> whole panel glows.
 }
-
