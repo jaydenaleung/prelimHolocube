@@ -4017,7 +4017,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Holocube v3\nTesting Phase: Single-Board"
+	(gr_text "Holocube v1.0\nTesting Phase: Single-Board"
 		(at 167.915 68.726 0)
 		(layer "F.SilkS")
 		(uuid "d3b247f2-f40b-401c-b24b-395f0480bfc4")
