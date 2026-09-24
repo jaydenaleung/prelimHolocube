@@ -1,4 +1,4 @@
-(footprint "Dorhea_MT3608_Adjustable"
+(footprint "HiLetgo_XL6009_Adjustable"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -15,7 +15,7 @@
 			)
 		)
 	)
-	(property "Value" "Dorhea_MT3608_Adjustable"
+	(property "Value" "HiLetgo_XL6009_Adjustable"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -55,8 +55,8 @@
 	)
 	(attr smd)
 	(fp_rect
-		(start -16.383 -8.89)
-		(end 16.383 8.89)
+		(start -21.5 -10.5)
+		(end 21.5 10.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -66,8 +66,8 @@
 		(uuid "4f862ad2-79b0-4632-8da0-3a9b6f036c32")
 	)
 	(fp_rect
-		(start -16.383 -8.89)
-		(end 16.383 8.89)
+		(start -21.5 -10.5)
+		(end 21.5 10.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -77,8 +77,8 @@
 		(uuid "5d8a7a52-0916-4499-81e4-4af714692506")
 	)
 	(fp_rect
-		(start -16.383 -8.89)
-		(end 16.383 8.89)
+		(start -21.5 -10.5)
+		(end 21.5 10.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -99,45 +99,33 @@
 			)
 		)
 	)
-	(pad "1" thru_hole roundrect
-		(at -12.7 -6.35)
-		(size 4 2)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(roundrect_rratio 0.15)
+	(pad "1" smd rect
+		(at 19.5 -8.45)
+		(size 4 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "cd841f4e-5572-4214-aa42-974e35cb0364")
+	)
+	(pad "2" smd rect
+		(at 19.5 8.475)
+		(size 4 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "e1372dc2-7c24-486e-856b-6e31cd139446")
+	)
+	(pad "3" smd rect
+		(at -19.5 -8.5)
+		(size 4 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
 		(uuid "919be14c-301d-41a8-96e9-47ad7d5ab4c8")
 	)
-	(pad "2" thru_hole roundrect
-		(at -10.3 5.2)
-		(size 4 2)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(roundrect_rratio 0.15)
+	(pad "4" smd rect
+		(at -19.5 8.475)
+		(size 4 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "6295f896-bcee-458f-86fb-546fb455be2f")
-	)
-	(pad "3" thru_hole roundrect
-		(at 10.1 -4.7)
-		(size 4 2)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(roundrect_rratio 0.15)
-		(thermal_bridge_angle 45)
-		(uuid "ea654041-c383-4d68-88f4-51b70ce66643")
-	)
-	(pad "4" thru_hole roundrect
-		(at 12.7 6.35)
-		(size 4 2)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(roundrect_rratio 0.15)
-		(thermal_bridge_angle 45)
-		(uuid "7bc224e2-b801-48ff-940f-138c695e9964")
+		(uuid "54846111-dcda-4fa7-a6f0-27026b5a0d0d")
 	)
 	(embedded_fonts no)
 )

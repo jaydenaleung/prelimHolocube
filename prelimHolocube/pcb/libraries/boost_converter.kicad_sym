@@ -136,7 +136,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "Dorhea_MT3608_Adjustable"
+	(symbol "HiLetgo_XL6009_Adjustable"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -183,7 +183,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "Dorhea_MT3608_Adjustable_1_1"
+		(symbol "HiLetgo_XL6009_Adjustable_1_1"
 			(rectangle
 				(start -11.43 7.62)
 				(end 11.43 -7.62)

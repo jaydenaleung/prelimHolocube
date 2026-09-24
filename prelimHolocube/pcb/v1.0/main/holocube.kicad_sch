@@ -878,7 +878,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "boost_converter:Dorhea_MT3608_Adjustable"
+		(symbol "boost_converter:HiLetgo_XL6009_Adjustable"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -925,7 +925,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Dorhea_MT3608_Adjustable_1_1"
+			(symbol "HiLetgo_XL6009_Adjustable_1_1"
 				(rectangle
 					(start -11.43 7.62)
 					(end 11.43 -7.62)
@@ -2851,9 +2851,9 @@
 		)
 		(uuid "72113437-4e4b-43e0-a436-404ff54ccb5f")
 	)
-	(text "MicroUSB used for MCU logic power and serial uploading."
+	(text "USB-C used for MCU logic power and serial uploading."
 		(exclude_from_sim no)
-		(at 209.042 73.152 0)
+		(at 210.058 73.152 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2904,12 +2904,6 @@
 		(uuid "0d826a1b-6880-4ae3-9236-928b2a5eb00d")
 	)
 	(junction
-		(at 242.57 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1bdb8866-de13-4d52-8887-1ca413061dd2")
-	)
-	(junction
 		(at 33.02 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2934,6 +2928,12 @@
 		(uuid "2c4eadf6-d65b-4f6c-8d03-5420b27fce51")
 	)
 	(junction
+		(at 242.57 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ed0ce06-2641-4cd4-8947-58d3ec248fbc")
+	)
+	(junction
 		(at 35.56 127)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2956,6 +2956,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c4af993-9d21-4a01-b10f-01207f6b63da")
+	)
+	(junction
+		(at 214.63 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cb3054a-6914-4f25-b0f7-43fae55dfb3b")
 	)
 	(junction
 		(at 106.68 76.2)
@@ -3228,12 +3234,6 @@
 		(uuid "f1a27923-e6d5-4bef-afb3-df426cb1d9e4")
 	)
 	(junction
-		(at 214.63 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f1d4374e-1c8b-4d35-9cc2-692e8f7be1a7")
-	)
-	(junction
 		(at 45.72 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3258,6 +3258,10 @@
 		(uuid "fe61bf24-c2a7-4671-871a-c12800af4a5f")
 	)
 	(no_connect
+		(at 193.04 55.88)
+		(uuid "2153558a-406b-4e90-a165-2df31d3adf97")
+	)
+	(no_connect
 		(at 246.38 144.78)
 		(uuid "27b44c66-5477-4e25-8e01-f09d60d2e780")
 	)
@@ -3266,20 +3270,52 @@
 		(uuid "458e897e-1423-455b-a080-0f6e8dd21764")
 	)
 	(no_connect
+		(at 193.04 58.42)
+		(uuid "481e7c13-ee30-4109-9a4e-bcf0834ec32f")
+	)
+	(no_connect
 		(at 246.38 142.24)
 		(uuid "4d5002d6-94a1-4c96-a658-0fe2c21158a3")
+	)
+	(no_connect
+		(at 223.52 63.5)
+		(uuid "6d566f9d-f3c9-49b8-9d47-849b28ecfb7a")
+	)
+	(no_connect
+		(at 193.04 45.72)
+		(uuid "8db65750-535f-4c57-9b28-203a73c17055")
 	)
 	(no_connect
 		(at 205.74 144.78)
 		(uuid "9bcb5450-536f-4e99-a1a9-7aa2a612f71c")
 	)
 	(no_connect
+		(at 223.52 60.96)
+		(uuid "ad6e37bf-26c2-431e-a2f4-f4166958d17c")
+	)
+	(no_connect
+		(at 223.52 35.56)
+		(uuid "b5e1b4ea-7762-41e1-b454-e449c6be17cd")
+	)
+	(no_connect
+		(at 193.04 35.56)
+		(uuid "c8dc15c2-f55f-40b6-9b12-2dcf5dd30d74")
+	)
+	(no_connect
 		(at 205.74 142.24)
 		(uuid "d14e8a0b-9a13-4d68-921c-6691438abb7f")
 	)
 	(no_connect
+		(at 223.52 58.42)
+		(uuid "dad914a6-d9a1-4d48-b4e1-05e57d9b47fc")
+	)
+	(no_connect
 		(at 205.74 139.7)
 		(uuid "f5cb007c-8a71-4487-ada1-8f230bea1183")
+	)
+	(no_connect
+		(at 193.04 33.02)
+		(uuid "fd6f40d0-69b6-433c-8df2-507b49e9bf2a")
 	)
 	(wire
 		(pts
@@ -3540,16 +3576,6 @@
 			(type default)
 		)
 		(uuid "15734b4e-c430-4dc9-9167-65843147f9a2")
-	)
-	(wire
-		(pts
-			(xy 223.52 58.42) (xy 227.33 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17b9e125-cc5f-415f-a678-ca11425e59be")
 	)
 	(wire
 		(pts
@@ -4003,16 +4029,6 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 35.56) (xy 193.04 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44979362-ffd7-4709-a725-76c3e4bcc66c")
-	)
-	(wire
-		(pts
 			(xy 115.57 148.59) (xy 134.62 148.59)
 		)
 		(stroke
@@ -4050,16 +4066,6 @@
 			(type default)
 		)
 		(uuid "483ddfe8-6863-47a6-ac78-18b33d2474d2")
-	)
-	(wire
-		(pts
-			(xy 189.23 33.02) (xy 193.04 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4adb91b6-58c6-4c97-94e9-3d05c2c1f56f")
 	)
 	(wire
 		(pts
@@ -4573,6 +4579,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 27.94) (xy 227.33 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82b3a5c2-6ebb-4f41-9322-e95e798077c3")
+	)
+	(wire
+		(pts
 			(xy 41.91 57.15) (xy 60.96 57.15)
 		)
 		(stroke
@@ -4630,16 +4646,6 @@
 			(type default)
 		)
 		(uuid "88a43f01-102d-41a2-be69-96ebcad86b91")
-	)
-	(wire
-		(pts
-			(xy 234.95 58.42) (xy 238.76 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89fc0074-5955-4d85-b04b-f2bb31b3307c")
 	)
 	(wire
 		(pts
@@ -5350,26 +5356,6 @@
 			(type default)
 		)
 		(uuid "cf85a075-9afa-4cdc-b121-a9e25f5391e1")
-	)
-	(wire
-		(pts
-			(xy 238.76 58.42) (xy 238.76 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d21b5395-9c88-4955-a059-14309ba38cba")
-	)
-	(wire
-		(pts
-			(xy 189.23 45.72) (xy 193.04 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4acf662-b825-4820-a5ad-33f2c8066dbf")
 	)
 	(wire
 		(pts
@@ -6473,6 +6459,28 @@
 			)
 		)
 	)
+	(global_label "ESP32_IN"
+		(shape input)
+		(at 252.73 130.81 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6cca9ed4-776d-462d-9679-b10580d1295a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 264.6656 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RES"
 		(shape input)
 		(at 80.01 176.53 0)
@@ -6781,6 +6789,28 @@
 			)
 		)
 	)
+	(global_label "ESP32_IN"
+		(shape input)
+		(at 227.33 27.94 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ab9976d6-efb1-47c2-8ddb-604524f64c6c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 239.2656 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape input)
 		(at 153.67 121.92 0)
@@ -6915,7 +6945,7 @@
 	)
 	(global_label "KY_SW"
 		(shape input)
-		(at 238.76 59.69 270)
+		(at 189.23 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6925,7 +6955,7 @@
 		)
 		(uuid "c964bbc6-2c17-44cc-8718-fb781f46db77")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 238.76 68.6623 90)
+			(at 180.2577 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7428,6 +7458,79 @@
 			(project "holocube"
 				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
 					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "boost_converter:HiLetgo_XL6009_Adjustable")
+		(at 228.6 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "02515394-16d6-4491-8493-9edccc7c50f8")
+		(property "Reference" "U10"
+			(at 228.092 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 228.6 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "boost_converter:HiLetgo_XL6009_Adjustable"
+			(at 228.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 228.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "ebeae65b-d173-41d9-8d24-4802339f4d83")
+		)
+		(pin "4"
+			(uuid "66ece365-d380-4891-9451-b22729a3019d")
+		)
+		(pin "1"
+			(uuid "4d15ad44-ccc3-410e-86c1-ec68a738b83b")
+		)
+		(pin "2"
+			(uuid "003cbff9-de4a-4ece-802f-349fd3ea85e5")
+		)
+		(instances
+			(project ""
+				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -7960,72 +8063,6 @@
 			(project "holocube"
 				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
 					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 252.73 130.81 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0f86a9d9-362f-4698-b205-c22b7d17c393")
-		(property "Reference" "#PWR055"
-			(at 248.92 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 256.032 130.81 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 252.73 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 252.73 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 252.73 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9f7fc608-9a27-4138-9a5b-669a5271097c")
-		)
-		(instances
-			(project "holocube"
-				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
-					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -8701,73 +8738,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 256.54 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1aafdec2-b103-49f4-b1aa-c7394ac0973a")
-		(property "Reference" "#PWR046"
-			(at 260.35 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 252.73 38.0999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 256.54 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b56afc2f-b7ee-47a1-8e73-05542b6f6f05")
-		)
-		(instances
-			(project ""
-				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
-					(reference "#PWR046")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 214.63 104.14 270)
 		(unit 1)
@@ -9236,6 +9206,71 @@
 			(project "holocube"
 				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 38.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f0c4f10-4ac2-4b91-9bdc-ca428df69172")
+		(property "Reference" "#PWR046"
+			(at 260.35 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 250.19 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6da1470d-fe51-4898-a934-2c8d74572b0b")
+		)
+		(instances
+			(project "holocube"
+				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -12259,73 +12294,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 231.14 58.42 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9666c112-7a10-4111-8c48-a1faa02060f5")
-		(property "Reference" "R9"
-			(at 228.854 61.468 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 233.172 61.468 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 231.394 57.404 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 231.14 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 231.14 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "fa0b4d80-723b-4929-b495-b0b9a467982a")
-		)
-		(pin "1"
-			(uuid "fdd43b3d-a188-42b4-8fdb-29d8848f3bd6")
-		)
-		(instances
-			(project ""
-				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "transparent_oled_display:surenoo-1.12in-128x128")
 		(at 134.62 129.54 0)
 		(unit 1)
@@ -13472,79 +13440,6 @@
 			(project "holocube"
 				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
 					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "boost_converter:Dorhea_MT3608_Adjustable")
-		(at 228.6 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b88c91e6-d984-4d15-9e08-a98b203b75ab")
-		(property "Reference" "U10"
-			(at 228.346 101.854 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 228.6 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "boost_converter:Dorhea_MT3608_Adjustable"
-			(at 228.6 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "f142ef76-71e4-4d15-abd9-8c62e27158b0")
-		)
-		(pin "2"
-			(uuid "eb7664ae-b850-4911-989b-240f3e677f0e")
-		)
-		(pin "3"
-			(uuid "e3e152f6-bac0-48a2-86c6-0f0e3b3174d3")
-		)
-		(pin "1"
-			(uuid "7879f15c-c2d3-439a-ac5c-0a8dc969346c")
-		)
-		(instances
-			(project ""
-				(path "/4381b5ea-692b-426e-8b2f-e97762cb9007"
-					(reference "U10")
 					(unit 1)
 				)
 			)
