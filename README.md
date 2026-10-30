@@ -3,7 +3,7 @@ Holocube
 
 A volumetric display from stacked transparent displays as a premise to a true free-floating voxel-array display.
 
-Image here
+<img height="400" alt="Photo0_Holocube" src="https://github.com/user-attachments/assets/dfeaeefd-a537-487b-973c-abe09fe62049" />
 
 ---
 
