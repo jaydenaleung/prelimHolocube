@@ -1,0 +1,8 @@
+{
+  "_comment": "Placeholder pin map for the 7-panel Holocube v3. CS entries are in board order 1..7. Edit freely; no recompile is needed, just restart the run. Use --pins auto to make the simulator guess instead.",
+  "cs": [13, 27, 26, 25, 33, 32, 16],
+  "dc": 21,
+  "rst": 19,
+  "sck": 18,
+  "mosi": 23
+}

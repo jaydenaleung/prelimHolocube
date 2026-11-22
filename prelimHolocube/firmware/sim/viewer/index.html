@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holocube Simulator</title>
+<link rel="stylesheet" href="/viewer/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "/vendor/three/build/three.module.js",
+  "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">Holocube <span>simulator</span></div>
+  <div class="sketchname" id="sketchName">sketch.ino</div>
+  <div class="chip" id="statusChip" data-state="idle">Starting…</div>
+  <div class="buildinfo" id="buildInfo"></div>
+  <div class="spacer"></div>
+  <span class="uptodate" id="upToDate" hidden>✓ Up to date</span>
+  <button class="primary" id="compileBtn" hidden title="Ctrl/Cmd+Enter">Compile and run</button>
+  <span class="compiling" id="compilingLabel" hidden><i class="spin"></i> Compiling…</span>
+</header>
+<div class="banner" id="banner" hidden></div>
+
+<main class="grid">
+  <section class="pane editor-pane" aria-label="Firmware editor">
+    <div class="pane-head">
+      <h2>Firmware</h2>
+      <div class="btnrow">
+        <button id="openBtn" class="ghost">Open .ino</button>
+        <button id="resetBtn" class="ghost">Reset to original</button>
+        <button id="downloadBtn" class="ghost">Download .ino</button>
+        <input type="file" id="fileInput" accept=".ino,.cpp,.c,.h,.txt" hidden>
+      </div>
+    </div>
+    <div id="editor" class="editor"></div>
+    <div class="errors" id="errorsPane">
+      <div class="pane-head sm">
+        <h2 id="errorsTitle">Build &amp; runtime messages</h2>
+        <a id="rawLog" href="#" target="_blank" rel="noopener" hidden>raw compiler log</a>
+      </div>
+      <div id="errorList" class="errlist"><div class="empty">No errors.</div></div>
+      <details id="warnDetails" class="compwarn" hidden><summary id="warnSummary">Compiler warnings</summary><div id="warnList" class="errlist"></div></details>
+    </div>
+  </section>
+
+  <section class="pane view-pane" aria-label="3D view">
+    <div class="viewbar">
+      <button id="modeBtn" class="modebtn" aria-pressed="false" title="Swap between the bare light points and the physical glass stack">
+        <span class="sw" aria-hidden="true">⇄</span> View: <b id="modeLbl">Light points only</b></button>
+      <div class="seg" role="group" aria-label="Viewing side">
+        <button id="sideFront" class="on" title="Viewer in front of the two cover glasses, looking at display 1 first">From display 1 side</button>
+        <button id="sideBack" title="Viewer behind the stack, looking through the unlit display 8 at display 7 first">From display 7 side</button>
+      </div>
+      <div class="seg" role="group" aria-label="View">
+        <button id="viewFront" class="on">Front view</button>
+        <button id="viewOrbit">Orbit view</button>
+      </div>
+      <label class="check"><input type="checkbox" id="orthoChk"> Orthographic</label>
+      <label class="check"><input type="checkbox" id="outlineChk" checked> Glass outlines</label>
+      <label class="check"><input type="checkbox" id="axesChk"> Origin axes</label>
+      <label class="check"><input type="checkbox" id="gizmoChk" checked> Gizmo</label>
+      <label class="range">Glow <input type="range" id="gain" min="0.3" max="4" step="0.05" value="1"></label>
+      <div class="layers" id="layerChips" role="group" aria-label="Toggle layers"></div>
+    </div>
+    <div class="canvaswrap"><canvas id="gl"></canvas>
+      <div class="hud" id="hud"></div>
+    </div>
+  </section>
+
+  <aside class="pane side" aria-label="Simulation state">
+    <section>
+      <h2>Clock</h2>
+      <div class="clock"><span id="vclock">0.000</span><small>s virtual</small></div>
+      <div class="kv"><span>Display refresh</span><b id="fps">–</b></div>
+      <div class="ctl">
+        <button id="pauseBtn" class="ghost">Pause</button>
+        <button id="restartBtn" class="ghost">Restart run</button>
+      </div>
+      <label class="range wide">Speed <input type="range" id="speed" min="-1" max="1.30103" step="0.01" value="0"><b id="speedLbl">1.0×</b></label>
+    </section>
+
+    <section>
+      <h2>Inputs <span class="count" id="isrCount" title="Interrupt handlers run so far">0 ISR</span></h2>
+      <div id="inputs" class="inputs"></div>
+      <form id="inAddForm" class="inadd">
+        <input type="number" id="inPin" min="0" max="39" placeholder="GPIO" aria-label="GPIO number">
+        <select id="inKind" aria-label="Input kind"><option value="button">button</option><option value="analog">analog</option></select>
+        <button class="ghost mini" type="submit">add</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Panels</h2>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section>
+      <h2>Pins</h2>
+      <div id="pinTable" class="pins"></div>
+      <details class="pinedit"><summary>Edit pins.json</summary>
+        <textarea id="pinsText" spellcheck="false" rows="8"></textarea>
+        <div class="ctl"><button id="pinsApply" class="ghost">Apply &amp; restart run</button><span id="pinsMsg" class="msg"></span></div>
+      </details>
+    </section>
+
+    <section>
+      <h2>Run settings</h2>
+      <div class="settings">
+        <label>Layer pitch (mm)<input type="number" id="setPitch" step="0.1" min="0.1" value="2.5"></label>
+        <label>SPI max (MHz)<input type="number" id="setSpiMax" step="1" min="1" value="10"></label>
+        <label>Watchdog (virtual ms)<input type="number" id="setWdt" step="500" min="100" value="5000"></label>
+        <label>CPU cost factor<input type="number" id="setCpu" step="5" min="0" value="40"></label>
+        <label>IREF (kΩ)<input type="number" id="setIref" step="50" min="100" value="1000"></label>
+        <label>RAM speckle seed<input type="number" id="setSeed" step="1" value="1"></label>
+      </div>
+      <small class="hint">Layer pitch applies instantly. Everything else restarts the run, no recompile needed.</small>
+    </section>
+
+    <section id="glassSection">
+      <h2>Glass stack</h2>
+      <div class="gstack" id="gstackDiagram" aria-label="Stack order, front to back"></div>
+      <div class="settings">
+        <label>Screen transparency %<input type="number" id="gScreenT" step="1" min="1" max="100" value="85"></label>
+        <label>Acrylic transparency %<input type="number" id="gAcrT" step="1" min="1" max="100" value="95"></label>
+        <label>Cover glass transp. % <em title="Not given in the brief, assumed">(assumed)</em><input type="number" id="gGlassT" step="1" min="1" max="100" value="92"></label>
+        <label>Screen thickness mm<input type="number" id="gScreenThk" step="0.1" min="0.2" max="2.4" value="1.0"></label>
+        <label>Cover glass thickness mm<input type="number" id="gGlassThk" step="0.1" min="0.2" max="5" value="1.5"></label>
+        <label>Room behind (0-1)<input type="number" id="gRoom" step="0.05" min="0" max="1" value="0.15"></label>
+        <label>Room light on glass (0-1)<input type="number" id="gAmb" step="0.05" min="0" max="1" value="0.4"></label>
+        <label>Table angle (deg)<input type="number" id="gAngle" step="5" min="0" max="80" value="40"></label>
+      </div>
+      <table class="gtable" id="gtable" aria-label="Fraction of each display's light that reaches the viewer"></table>
+      <small class="hint" id="gnote"></small>
+    </section>
+
+    <section class="grow">
+      <h2>Serial <button id="clearSerial" class="mini">clear</button></h2>
+      <div id="serial" class="serial" tabindex="0" aria-live="off"></div>
+      <form id="serialForm" class="sendrow">
+        <input id="serialIn" placeholder="Send to Serial…" autocomplete="off" spellcheck="false" aria-label="Text to send to Serial">
+        <select id="serialEol" aria-label="Line ending"><option value="">No line ending</option><option value="nl" selected>Newline</option><option value="cr">CR</option><option value="crlf">NL &amp; CR</option></select>
+        <button class="ghost" type="submit">Send</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Warnings <span class="count" id="warnCount">0</span></h2>
+      <div id="lint" class="lint"><div class="empty">No hardware warnings.</div></div>
+    </section>
+  </aside>
+</main>
+<script type="module" src="/viewer/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "holocube-sim",
+  "version": "0.1.0",
+  "description": "Firmware simulator for the Holocube v3 stacked transparent OLED display",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sim": "node tools/sim.js",
+    "headless": "node tools/headless.js",
+    "compile": "node tools/compile-cli.js",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "dependencies": {
+    "three": "0.160.1"
+  },
+  "engines": { "node": ">=20" }
+}
